@@ -1,21 +1,8 @@
-name=input("Name:")
-if name.lower() == "ahmed":
-    password=int(input("password:"))
-    if password == 1394 :
-        print("Welcome")
-    else:
-        print("incorrect entry") 
-elif name.lower() == "ali":
-    password=int(input("password:"))
-    if password == 6078 :
-        print("Welcome")
-    else:
-        print("incorrect entry")    
-elif name.lower() == "Amr":
-    password=int(input("password:"))
-    if password == 9345 :
-        print("Welcome")
-    else:
-        print("incorrect entry")    
-else:
-    print("incorrect entry")
+users={"ahmed":1394,"ali":6078,"amr":9345}
+username=(input("please enter your name: ")).lower()
+password=int(input("please enter your password: "))
+if username in users and users[username] == password:  
+    print(username,"is logged in")  
+else:  
+     print("incorrect username or password")  
+      
